@@ -1,12 +1,18 @@
+"""
+クラス名：App
+説明：Flaskアプリケーションのエントリーポイントを管理するクラス
+"""
+
 from flask import Flask
 from routes import register_routes
 
-# Flaskアプリケーションの作成
-app = Flask(__name__)
+class App:
+    def __init__(self):
+        # Flaskアプリケーションの作成
+        self.app = Flask(__name__)
+        # ルートの登録
+        register_routes(self.app)
 
-# ルートの登録
-register_routes(app)
-
-if __name__ == '__main__':
-    # アプリケーションの実行
-    app.run(port=5000)
+    def run(self, port=5000):
+        # アプリケーションの実行
+        self.app.run(port=port)

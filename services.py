@@ -1,3 +1,7 @@
+"""
+クラス名：TwilioService
+説明：Twilioサービスを扱うクラス
+"""
 import os
 import time
 import requests

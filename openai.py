@@ -1,3 +1,8 @@
+"""
+クラス名：OpenAI
+説明：OpenAI APIを利用するためのクラス
+"""
+
 import openai
 
 class OpenAI:

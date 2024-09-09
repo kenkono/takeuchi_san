@@ -12,7 +12,11 @@ COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # スクリプトをコンテナにコピー
-COPY bukkaku_automation.py .
+COPY app.py .
+COPY routes.py .
+COPY services.py .
+COPY openai.py .
+COPY main.py .
 
 # コンテナ起動時に実行するコマンドを設定
-CMD ["python", "bukkaku_automation.py"]
+CMD ["python", "main.py"]
